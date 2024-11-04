@@ -1,6 +1,4 @@
 
-// src/pages/index.js
-
 import HeroSection from '../components/HeroSection';
 import HowItWorks from '../components/HowItWorks';
 import FeaturedAssets from '../components/FeaturedAssets';
