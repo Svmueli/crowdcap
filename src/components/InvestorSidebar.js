@@ -6,7 +6,7 @@ export default function InvestorSidebar() {
   return (
     <div className="w-64 h-screen bg-gray-800 text-white shadow-lg">
       <div className="p-6">
-        <h2 className="text-2xl font-bold">Investor Dashboard</h2>
+        <h2 className="text-2xl font-bold">Investor</h2>
       </div>
       <nav className="mt-10">
         <ul>

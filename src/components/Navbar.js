@@ -1,16 +1,15 @@
-// src/components/Navbar.js
-
 import Link from 'next/link';
 import { useState } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-lg">
-      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        {/* Logo */}
-        <Link href="/" className="text-2xl font-bold text-emerald-600">
+    <nav className="bg-white shadow-lg fixed w-full z-10">
+      <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+        {/* Logo with Gradient */}
+        <Link href="/" className="text-3xl font-extrabold bg-gradient-to-r from-emerald-600 to-yellow-400 bg-clip-text text-transparent">
           CrowdCap
         </Link>
 
@@ -18,38 +17,31 @@ export default function Navbar() {
         <div className="lg:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-gray-600 hover:text-emerald-600 focus:outline-none"
+            className="text-emerald-600 hover:text-emerald-500 focus:outline-none"
           >
-            <svg
-              className="h-6 w-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
-              />
-            </svg>
+            {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
         </div>
 
         {/* Navigation Links */}
-        <div className={`lg:flex ${isOpen ? "block" : "hidden"} flex-grow justify-center`}>
-          <Link href="/marketplace" className="text-lg text-gray-600 hover:text-emerald-600">
+        <div className={`lg:flex flex-grow justify-center items-center ${isOpen ? 'block' : 'hidden'}`}>
+          <Link href="/marketplace" className="mx-4 text-lg font-semibold text-gray-700 hover:text-emerald-600 transition">
             Marketplace
+          </Link>
+          <Link href="/about" className="mx-4 text-lg font-semibold text-gray-700 hover:text-emerald-600 transition">
+            About Us
+          </Link>
+          <Link href="/contact" className="mx-4 text-lg font-semibold text-gray-700 hover:text-emerald-600 transition">
+            Contact
           </Link>
         </div>
 
-        {/* Other Links */}
-        <div className={`lg:flex ${isOpen ? "block" : "hidden"}`}>
-          <Link href="/investor/signup" className="flex items-center mt-4 lg:inline-block lg:mt-0 text-gray-600 hover:text-emerald-600 mr-4">
+        {/* User Links */}
+        <div className={`lg:flex items-center space-x-4 ${isOpen ? 'block mt-4' : 'hidden'}`}>
+          <Link href="/investor/signup" className="px-4 py-2 text-lg font-semibold text-gray-700 hover:text-emerald-600 transition">
             For Investors
           </Link>
-          <Link href="/sme/signup" className="flex items-center mt-4 lg:inline-block lg:mt-0 text-gray-600 hover:text-emerald-600">
+          <Link href="/sme/signup" className="px-4 py-2 text-lg font-semibold text-gray-700 hover:text-emerald-600 transition">
             For SMEs
           </Link>
         </div>
