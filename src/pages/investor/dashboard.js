@@ -1,5 +1,3 @@
-// src/pages/investor/dashboard.js
-
 import InvestorSidebar from '../../components/InvestorSidebar';
 import { FaChartPie, FaClipboardList, FaMoneyBillWave } from 'react-icons/fa';
 import Link from 'next/link';
@@ -11,7 +9,7 @@ export default function InvestorDashboard() {
       <InvestorSidebar />
 
       {/* Main Content Area */}
-      <div className="flex-1 p-6 bg-gray-100">
+      <div className="flex-1 p-6 bg-gray-100 pt-24"> {/* Added pt-24 for navbar offset */}
         <h1 className="text-3xl font-bold mb-4">Welcome to Your Investor Dashboard</h1>
         <p className="mb-6">Track your investments and discover new opportunities.</p>
 

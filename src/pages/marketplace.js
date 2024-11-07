@@ -9,7 +9,7 @@ export default function Marketplace() {
         <h1 className="text-4xl font-bold text-center text-emerald-600">Explore Investment Opportunities</h1>
         
         {/* Search Bar */}
-        <div className="flex justify-center mt-8">
+        <div className="flex justify-center mt-8 mb-10"> {/* Added bottom margin here */}
           <div className="relative w-full max-w-lg">
             <input
               type="text"

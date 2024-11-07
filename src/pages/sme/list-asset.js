@@ -18,9 +18,7 @@ export default function ListAsset() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would typically send the form data to the backend to save the asset
     console.log('Asset listed:', formData);
-    // Reset form after submission
     setFormData({
       name: '',
       description: '',
@@ -30,7 +28,7 @@ export default function ListAsset() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="container mx-auto px-4 py-12 pt-20"> {/* Add pt-20 to add top padding */}
       <h1 className="text-4xl font-bold text-center text-emerald-600">List Your Asset</h1>
       <form onSubmit={handleSubmit} className="mt-8 max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg">
         <div className="mb-6">

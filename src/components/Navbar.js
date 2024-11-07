@@ -28,7 +28,7 @@ export default function Navbar() {
           <Link href="/marketplace" className="mx-4 text-lg font-semibold text-gray-700 hover:text-emerald-600 transition">
             Marketplace
           </Link>
-          <Link href="/about" className="mx-4 text-lg font-semibold text-gray-700 hover:text-emerald-600 transition">
+          <Link href="/about-us" className="mx-4 text-lg font-semibold text-gray-700 hover:text-emerald-600 transition">
             About Us
           </Link>
           <Link href="/contact" className="mx-4 text-lg font-semibold text-gray-700 hover:text-emerald-600 transition">

@@ -1,4 +1,3 @@
-// src/components/FeaturedAssets.js
 import { FaHeart, FaArrowRight } from 'react-icons/fa';
 
 export default function FeaturedAssets() {
@@ -70,12 +69,12 @@ export default function FeaturedAssets() {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-b from-white to-emerald-50">
+    <section className="py-16 bg-gradient-to-b from-emerald-50 to-white">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-emerald-600 mb-10">Featured Assets</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {assets.map((asset) => (
-            <div key={asset.id} className="relative bg-white rounded-xl shadow-md p-6 transition-transform transform hover:-translate-y-1 hover:shadow-lg">
+            <div key={asset.id} className="relative bg-gradient-to-r from-white to-gray-50 rounded-xl shadow-md p-6 transition-transform transform hover:-translate-y-1 hover:shadow-lg hover:scale-105">
               <button className="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition">
                 <FaHeart />
               </button>
@@ -85,14 +84,14 @@ export default function FeaturedAssets() {
 
               <div className="mt-4">
                 <p className="text-gray-600 text-sm">Fraction Price</p>
-                <p className="text-lg font-bold text-blue-700">{asset.fractionPrice}</p>
+                <p className="text-lg font-bold bg-gradient-to-r from-blue-600 to-emerald-500 text-transparent bg-clip-text">{asset.fractionPrice}</p>
               </div>
 
               <div className="mt-4">
                 <p className="text-sm text-gray-600">Funding Progress</p>
                 <div className="w-full bg-gray-300 h-2 rounded-full">
                   <div
-                    className="bg-emerald-500 h-2 rounded-full"
+                    className="h-2 rounded-full bg-gradient-to-r from-emerald-400 to-emerald-600"
                     style={{ width: asset.fundingProgress }}
                   ></div>
                 </div>
@@ -101,7 +100,7 @@ export default function FeaturedAssets() {
 
               <a
                 href={asset.link}
-                className="mt-6 inline-flex items-center justify-center w-full text-center bg-emerald-500 text-white py-2 rounded-full font-semibold hover:bg-emerald-600 transition"
+                className="mt-6 inline-flex items-center justify-center w-full text-center bg-gradient-to-r from-yellow-500 to-yellow-600 text-white py-2 rounded-full font-semibold hover:bg-gradient-to-r hover:from-yellow-600 hover:to-yellow-700 transition transform hover:scale-105"
               >
                 View Details
                 <FaArrowRight className="ml-2" />

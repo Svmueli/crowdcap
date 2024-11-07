@@ -1,4 +1,3 @@
-
 import SmeSidebar from '../../components/SmeSidebar';
 import { FaPlusCircle, FaChartLine, FaBullhorn } from 'react-icons/fa';
 import Link from 'next/link';
@@ -10,7 +9,7 @@ export default function SmeDashboard() {
       <SmeSidebar />
 
       {/* Main Content Area */}
-      <div className="flex-1 p-6 bg-gray-100">
+      <div className="flex-1 p-6 bg-gray-100 pt-24"> {/* Added pt-24 (padding-top) for navbar offset */}
         <h1 className="text-3xl font-bold mb-4">Welcome to Your SME Dashboard</h1>
         <p className="mb-6">Manage your assets and track your investments.</p>
 
