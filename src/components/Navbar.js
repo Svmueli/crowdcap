@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useState } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes, FaCoins } from 'react-icons/fa'; // Importing the investment-related icon
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,9 +8,10 @@ export default function Navbar() {
   return (
     <nav className="bg-white shadow-lg fixed w-full z-10">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        {/* Logo with Gradient */}
-        <Link href="/" className="text-3xl font-extrabold bg-gradient-to-r from-emerald-600 to-yellow-400 bg-clip-text text-transparent">
-          CrowdCap
+        {/* Logo with Gradient and Investment Icon */}
+        <Link href="/" className="flex items-center text-3xl font-extrabold text-emerald-600">
+          <FaCoins className="mr-2 text-3xl text-yellow-400" /> {/* Investment Icon with custom color */}
+          <span className="text-emerald-600">CrowdCap</span> {/* Regular text color for the company name */}
         </Link>
 
         {/* Hamburger Icon for Mobile */}
