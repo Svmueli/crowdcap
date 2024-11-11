@@ -1,4 +1,3 @@
-
 import HeroSection from '../components/HeroSection';
 import HowItWorks from '../components/HowItWorks';
 import FeaturedAssets from '../components/FeaturedAssets';
@@ -10,8 +9,8 @@ import ContactUs from '@/components/Contact';
 
 export default function Home() {
   return (
-    <div>
-      <HeroSection />
+    <div className="bg-darkBg text-white">
+      <HeroSection /> {/* Navbar is inside HeroSection */}
       <AboutUs />
       <HowItWorks />
       <FAQ />

@@ -1,5 +1,3 @@
-import { FaHeart, FaArrowRight } from 'react-icons/fa';
-
 export default function FeaturedAssets() {
   const assets = [
     {
@@ -66,44 +64,23 @@ export default function FeaturedAssets() {
       fundingProgress: "70%",
       link: "/assets/8"
     },
+
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-b from-emerald-50 to-white">
+    <section className="py-16 bg-darkBg">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center text-emerald-600 mb-10">Featured Assets</h2>
+        <h2 className="text-4xl font-bold text-center text-white mb-10">Featured Assets</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {assets.map((asset) => (
-            <div key={asset.id} className="relative bg-gradient-to-r from-white to-gray-50 rounded-xl shadow-md p-6 transition-transform transform hover:-translate-y-1 hover:shadow-lg hover:scale-105">
-              <button className="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition">
-                <FaHeart />
-              </button>
-
-              <h3 className="text-xl font-semibold text-emerald-600 mb-1">{asset.businessName}</h3>
-              <p className="text-gray-700 mb-2">{asset.assetName}</p>
-
-              <div className="mt-4">
-                <p className="text-gray-600 text-sm">Fraction Price</p>
-                <p className="text-lg font-bold bg-gradient-to-r from-blue-600 to-emerald-500 text-transparent bg-clip-text">{asset.fractionPrice}</p>
-              </div>
-
-              <div className="mt-4">
-                <p className="text-sm text-gray-600">Funding Progress</p>
-                <div className="w-full bg-gray-300 h-2 rounded-full">
-                  <div
-                    className="h-2 rounded-full bg-gradient-to-r from-emerald-400 to-emerald-600"
-                    style={{ width: asset.fundingProgress }}
-                  ></div>
-                </div>
-                <p className="text-xs text-gray-500 text-right mt-1">{asset.fundingProgress} funded</p>
-              </div>
-
-              <a
-                href={asset.link}
-                className="mt-6 inline-flex items-center justify-center w-full text-center bg-gradient-to-r from-yellow-500 to-yellow-600 text-white py-2 rounded-full font-semibold hover:bg-gradient-to-r hover:from-yellow-600 hover:to-yellow-700 transition transform hover:scale-105"
-              >
+            <div key={asset.id} className="relative bg-gradient-to-r from-gray-800 to-black rounded-xl shadow-lg p-6 hover:shadow-neon transition transform hover:scale-105">
+              <h3 className="text-xl font-semibold text-neonGreen mb-1">{asset.businessName}</h3>
+              <p className="text-gray-400">{asset.assetName}</p>
+              <p className="text-lg font-bold bg-gradient-to-r from-neonBlue to-neonPurple text-transparent bg-clip-text mt-4">
+                {asset.fractionPrice}
+              </p>
+              <a href={asset.link} className="inline-block mt-6 bg-gradient-to-r from-neonPink to-neonPurple text-white px-4 py-2 rounded-full shadow-neon hover:shadow-lg transition">
                 View Details
-                <FaArrowRight className="ml-2" />
               </a>
             </div>
           ))}
