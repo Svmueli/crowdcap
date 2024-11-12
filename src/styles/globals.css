@@ -2,15 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom Color Palette */
-.bg-primary { @apply bg-emerald-600; }
-.text-primary { @apply text-emerald-600; }
-.bg-secondary { @apply bg-blue-600; }
-.text-secondary { @apply text-blue-600; }
-.bg-accent { @apply bg-yellow-500; }
-.text-accent { @apply text-yellow-500; }
-
-/* Other Global Styles */
-body {
-  @apply font-sans text-gray-800 bg-gray-50;
-}
