@@ -1,148 +1,177 @@
-import React from 'react';
-import Footer from '../components/Footer';
+import { FC } from 'react';
 
-const Marketplace: React.FC = () => {
+const Marketplace: FC = () => {
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      {/* Top Bar with Logo, Title, and Add Listing Button */}
-      <div className="flex justify-between items-center p-6 bg-gray-800 shadow-lg">
-        <h1 className="text-3xl font-extrabold text-white">CrowdCap</h1>
-        <h2 className="text-2xl font-semibold text-white">Marketplace</h2>
-        <button className="bg-yellow-500 text-white py-2 px-6 rounded-lg font-bold hover:bg-yellow-600">
-          + Add Listing
+    <div className="relative w-full max-w-[1440px] h-auto bg-[#211F1F]">
+      {/* Header Section */}
+      <header className="flex justify-between items-center p-6 bg-[#0B0B0B] box-shadow-lg rounded-xl max-w-[1349px] mx-auto z-0">
+        <div className="text-white font-bold text-2xl">CrowdCap</div>
+        <nav className="flex-1 text-center">
+          <a href="#" className="text-white font-semibold text-xl">
+            Marketplace
+          </a>
+        </nav>
+        <button className="px-6 py-3 bg-yellow-500 text-black rounded-lg hover:bg-yellow-400">
+          Add Listing
         </button>
+      </header>
+
+      {/* Hero Section */}
+      <div
+        className="flex flex-col justify-center items-center text-white absolute top-[151px] left-1/2 transform -translate-x-1/2"
+        style={{
+          width: '1340px',
+          height: '378px',
+          backgroundImage: 'url(/assets/hero-background.jpg)', // Ensure correct image path
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="text-center p-4">
+          <h1 className="text-4xl font-bold">Discover Assets with CrowdCap</h1>
+          <p className="text-lg mt-2">Invest in Kenyan SMEs. Contribute to community growth.</p>
+        </div>
       </div>
 
-      {/* Header Section */}
-      <div className="p-8 bg-gray-800 text-center">
-        <p className="text-lg text-gray-400">
-          Browse through essential assets and equipment for SMEs in Kenya.
-        </p>
-        <div className="mt-4 flex justify-center space-x-4">
-          <input
-            type="text"
-            placeholder="Enter location or type"
-            className="flex-1 p-3 rounded-lg bg-gray-700 border border-gray-600 placeholder-gray-400 focus:outline-none focus:border-yellow-500"
-          />
-          <select className="p-3 rounded-lg bg-gray-700 border border-gray-600 text-gray-400">
-            <option>Asset Type</option>
-            <option>Agriculture & Equipment</option>
-            <option>Real Estate and Infrastructure</option>
-            <option>Manufacturing and Industrial Assets</option>
-            <option>Inventory and Consumables</option>
-            <option>Healthcare and Medical Equipment</option>
+      {/* Search Section (Find Property Field) */}
+      <div
+        className="flex flex-row justify-center items-center p-4 gap-4 absolute top-[calc(50%-82px/2-1016.5px)] left-1/2 transform -translate-x-1/2 bg-white opacity-90 shadow-lg rounded-full"
+        style={{
+          width: '1240px',
+          height: '82px',
+        }}
+      >
+        <input
+          type="text"
+          placeholder="Enter City, Zip, Address"
+          className="w-full p-3 rounded-lg text-black"
+        />
+        <div className="flex space-x-4">
+          <select className="p-3 rounded-lg bg-white text-black">
+            <option>Select Property Type</option>
+            <option>Residential</option>
+            <option>Commercial</option>
           </select>
-          <button className="bg-yellow-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-yellow-600">
+          <select className="p-3 rounded-lg bg-white text-black">
+            <option>Select Budget</option>
+            <option>Low</option>
+            <option>Medium</option>
+            <option>High</option>
+          </select>
+          <button className="px-6 py-3 bg-yellow-500 text-black rounded-lg hover:bg-yellow-400">
             Search
           </button>
         </div>
       </div>
 
-      {/* Listings Section */}
-      <div className="p-8 space-y-12">
-        {/* Agriculture & Equipment */}
-        <div>
-          <h2 className="text-3xl font-bold mb-6">Agriculture & Equipment</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Example Card */}
-            <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <img src="/path/to/agriculture-image.jpg" alt="Agriculture Equipment" className="w-full h-48 object-cover" />
-              <div className="p-4">
-                <p className="text-xl font-semibold text-yellow-500">Ksh 300,000</p>
-                <p className="text-gray-400 mt-2">Tractor, Eldoret</p>
-                <div className="flex items-center space-x-4 mt-4 text-gray-400">
-                  <span>🚜 Heavy-duty</span>
-                  <span>🌾 For large-scale farming</span>
-                </div>
-              </div>
+      {/* Other Featured Assets Section */}
+      <section className="p-6 mt-24">
+        <h2 className="text-white text-2xl font-bold">Other Featured Assets</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+          {/* Asset Card Example */}
+          <div className="bg-black text-white rounded-lg shadow-lg overflow-hidden">
+            <img
+              src="/assets/property1.jpg" // Ensure image exists
+              alt="Property"
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-4">
+              <h3 className="text-lg font-bold">KSh 22,250</h3>
+              <p className="text-sm">Penthouse, Nairobi City</p>
             </div>
-            {/* Repeat Card with different data */}
+          </div>
+          <div className="bg-black text-white rounded-lg shadow-lg overflow-hidden">
+            <img
+              src="/assets/property2.jpg"
+              alt="Property"
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-4">
+              <h3 className="text-lg font-bold">KSh 654,250</h3>
+              <p className="text-sm">Semi-detached house, Kiambu</p>
+            </div>
+          </div>
+          <div className="bg-black text-white rounded-lg shadow-lg overflow-hidden">
+            <img
+              src="/assets/property3.jpg"
+              alt="Property"
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-4">
+              <h3 className="text-lg font-bold">KSh 926,250</h3>
+              <p className="text-sm">Bungalow, Kisumu</p>
+            </div>
+          </div>
+          <div className="bg-black text-white rounded-lg shadow-lg overflow-hidden">
+            <img
+              src="/assets/property4.jpg"
+              alt="Property"
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-4">
+              <h3 className="text-lg font-bold">KSh 850,000</h3>
+              <p className="text-sm">Villa, Eldoret</p>
+            </div>
           </div>
         </div>
+      </section>
 
-        {/* Real Estate and Infrastructure */}
-        <div>
-          <h2 className="text-3xl font-bold mb-6">Real Estate and Infrastructure</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Example Card */}
-            <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <img src="/path/to/real-estate-image.jpg" alt="Real Estate" className="w-full h-48 object-cover" />
-              <div className="p-4">
-                <p className="text-xl font-semibold text-yellow-500">Ksh 5,000,000</p>
-                <p className="text-gray-400 mt-2">Retail Space, Nairobi</p>
-                <div className="flex items-center space-x-4 mt-4 text-gray-400">
-                  <span>🏬 Prime location</span>
-                  <span>📏 1500 sq ft</span>
-                </div>
-              </div>
+      {/* Hot Picks Section */}
+      <section className="p-6 bg-[#1D1D1D]">
+        <h2 className="text-white text-2xl font-bold">Hot Picks</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+          {/* Asset Card Example */}
+          <div className="bg-black text-white rounded-lg shadow-lg overflow-hidden">
+            <img
+              src="/assets/property5.jpg"
+              alt="Property"
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-4">
+              <h3 className="text-lg font-bold">KSh 1,500,000</h3>
+              <p className="text-sm">Office space, Nairobi</p>
             </div>
-            {/* Repeat Card with different data */}
+          </div>
+          <div className="bg-black text-white rounded-lg shadow-lg overflow-hidden">
+            <img
+              src="/assets/property6.jpg"
+              alt="Property"
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-4">
+              <h3 className="text-lg font-bold">KSh 800,000</h3>
+              <p className="text-sm">Retail unit, Mombasa</p>
+            </div>
+          </div>
+          <div className="bg-black text-white rounded-lg shadow-lg overflow-hidden">
+            <img
+              src="/assets/property7.jpg"
+              alt="Property"
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-4">
+              <h3 className="text-lg font-bold">KSh 1,200,000</h3>
+              <p className="text-sm">Warehouse, Nakuru</p>
+            </div>
+          </div>
+          <div className="bg-black text-white rounded-lg shadow-lg overflow-hidden">
+            <img
+              src="/assets/property8.jpg"
+              alt="Property"
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-4">
+              <h3 className="text-lg font-bold">KSh 2,000,000</h3>
+              <p className="text-sm">Business center, Kisumu</p>
+            </div>
           </div>
         </div>
+      </section>
 
-        {/* Manufacturing and Industrial Assets */}
-        <div>
-          <h2 className="text-3xl font-bold mb-6">Manufacturing and Industrial Assets</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Example Card */}
-            <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <img src="/path/to/manufacturing-image.jpg" alt="Manufacturing Equipment" className="w-full h-48 object-cover" />
-              <div className="p-4">
-                <p className="text-xl font-semibold text-yellow-500">Ksh 1,000,000</p>
-                <p className="text-gray-400 mt-2">Industrial Mixer, Thika</p>
-                <div className="flex items-center space-x-4 mt-4 text-gray-400">
-                  <span>⚙️ High capacity</span>
-                  <span>🏭 Durable build</span>
-                </div>
-              </div>
-            </div>
-            {/* Repeat Card with different data */}
-          </div>
-        </div>
-
-        {/* Inventory and Consumables */}
-        <div>
-          <h2 className="text-3xl font-bold mb-6">Inventory and Consumables</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Example Card */}
-            <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <img src="/path/to/inventory-image.jpg" alt="Inventory" className="w-full h-48 object-cover" />
-              <div className="p-4">
-                <p className="text-xl font-semibold text-yellow-500">Ksh 150,000</p>
-                <p className="text-gray-400 mt-2">Bulk Stock, Mombasa</p>
-                <div className="flex items-center space-x-4 mt-4 text-gray-400">
-                  <span>📦 Wholesale price</span>
-                  <span>🏪 Ready for sale</span>
-                </div>
-              </div>
-            </div>
-            {/* Repeat Card with different data */}
-          </div>
-        </div>
-
-        {/* Healthcare and Medical Equipment */}
-        <div>
-          <h2 className="text-3xl font-bold mb-6">Healthcare and Medical Equipment</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Example Card */}
-            <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <img src="/path/to/medical-equipment.jpg" alt="Medical Equipment" className="w-full h-48 object-cover" />
-              <div className="p-4">
-                <p className="text-xl font-semibold text-yellow-500">Ksh 800,000</p>
-                <p className="text-gray-400 mt-2">X-Ray Machine, Kisumu</p>
-                <div className="flex items-center space-x-4 mt-4 text-gray-400">
-                  <span>🏥 High resolution</span>
-                  <span>🔋 Battery backup</span>
-                </div>
-              </div>
-            </div>
-            {/* Repeat Card with different data */}
-          </div>
-        </div>
-      </div>
-
-      {/* Footer */}
-      <Footer />
+      {/* Footer Section */}
+      <footer className="bg-[#211F1F] text-white text-center p-6">
+        <p>&copy; 2024 CrowdCap. All rights reserved.</p>
+      </footer>
     </div>
   );
 };

@@ -39,9 +39,9 @@ const Home: React.FC = () => {
 
       {/* Right Section */}
       <div className="flex-1 bg-black text-white flex justify-center items-center relative">
-        {/* Background Globe or Image */}
+        {/* Background Image */}
         <div className="absolute inset-0 flex justify-center items-center">
-          <img src="/globe.png" alt="Globe" className="h-80 w-auto object-cover opacity-80" />
+          <img src="/images/background.svg" alt="Background" className="h-full w-full object-cover opacity-80" />
         </div>
 
         {/* Header Links */}
