@@ -1,61 +1,58 @@
-import Image from "next/image";
+import React from 'react';
+import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
-// Define the type for props
-interface FooterProps {
-  className?: string;
-}
-
-const Footer: React.FC<FooterProps> = ({ className = "" }) => {
+const Footer = () => {
   return (
-    <div className={`w-[1240px] flex flex-col items-end justify-start gap-[26px] max-w-full text-right text-base text-shades-white font-manrope ${className}`}>
-      <div className="self-stretch flex flex-row items-start justify-end gap-6 z-[2] mq450:flex-wrap mq450:justify-center">
-        <div className="flex flex-row items-start justify-start relative gap-2.5">
-          <div className="h-10 w-10 relative rounded-[50%] bg-shades-off-white" />
-          <Image
-            className="h-6 w-6 absolute !m-[0] top-[calc(50%_-_12px)] left-[calc(50%_-_12px)] rounded overflow-hidden shrink-0 z-[1]"
-            alt="Facebook Icon"
-            src="/images/imgFacebook.svg"
-            width={24}
-            height={24}
-          />
+    <footer className="bg-white text-black py-12">
+      {/* Wrapper div to limit the width of the horizontal line */}
+      <div className="max-w-[1200px] mx-auto px-4">
+        {/* Horizontal Line */}
+        <div className="border-t border-gray-200 mb-8"></div> 
+      </div>
+
+      <div className="max-w-[1200px] mx-auto px-4">
+        <div className="flex flex-col md:flex-row justify-between items-center mb-8">
+          {/* CrowdCap Information */}
+          <div className="text-center md:text-left mb-6 md:mb-0">
+            <h2 className="text-2xl font-semibold">CrowdCap</h2>
+            <p className="text-sm mt-2">Empowering Small & Micro Enterprises through Fractional Ownership</p>
+          </div>
+
+          {/* Footer Navigation */}
+          <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-12">
+            <a href="#features" className="text-lg hover:text-gray-600">Features</a>
+            <a href="#pricing" className="text-lg hover:text-gray-600">Pricing</a>
+            <a href="#contact" className="text-lg hover:text-gray-600">Contact</a>
+          </div>
         </div>
-        <div className="flex flex-row items-start justify-start relative gap-2.5">
-          <div className="h-10 w-10 relative rounded-[50%] bg-shades-off-white" />
-          <Image
-            className="h-6 w-6 absolute !m-[0] top-[calc(50%_-_12px)] left-[calc(50%_-_12px)] overflow-hidden shrink-0 z-[1]"
-            alt="LinkedIn Icon"
-            src="/images/imgLinkedIn.svg"
-            width={24}
-            height={24}
-          />
+
+        {/* Additional Information */}
+        <div className="text-center mb-8">
+          <p className="text-sm text-gray-500">
+            CrowdCap is a registered Kenyan company under the Companies Act. We are committed to empowering SMEs and creating sustainable economic growth through community-driven investments.
+          </p>
+          <p className="text-sm text-gray-500 mt-4">
+            <strong>Mission:</strong> To provide a platform that fosters financial inclusion by enabling small businesses to raise capital through fractional ownership.
+          </p>
+          <p className="text-sm text-gray-500 mt-2">
+            <strong>Vision:</strong> To create a thriving ecosystem where small businesses can scale, and communities can directly invest in local growth.
+          </p>
         </div>
-        <div className="flex flex-row items-start justify-start relative gap-2.5">
-          <div className="h-10 w-10 relative rounded-[50%] bg-shades-off-white" />
-          <Image
-            className="h-6 w-6 absolute !m-[0] top-[calc(50%_-_12px)] left-[calc(50%_-_12px)] overflow-hidden shrink-0 z-[1]"
-            alt="YouTube Icon"
-            src="/images/imgYouTube.svg"
-            width={24}
-            height={24}
-          />
+
+        {/* Social Media Links */}
+        <div className="flex justify-center space-x-8 mb-6">
+          <a href="https://facebook.com" className="text-2xl hover:text-gray-600"><FaFacebook /></a>
+          <a href="https://twitter.com" className="text-2xl hover:text-gray-600"><FaTwitter /></a>
+          <a href="https://linkedin.com" className="text-2xl hover:text-gray-600"><FaLinkedin /></a>
+          <a href="https://instagram.com" className="text-2xl hover:text-gray-600"><FaInstagram /></a>
         </div>
-        <div className="flex flex-row items-start justify-start relative gap-2.5">
-          <div className="h-10 w-10 relative rounded-[50%] bg-shades-off-white" />
-          <Image
-            className="h-6 w-6 absolute !m-[0] top-[calc(50%_-_12px)] left-[calc(50%_-_12px)] overflow-hidden shrink-0 z-[1]"
-            alt="Instagram Icon"
-            src="/images/imgInstagram.svg"
-            width={24}
-            height={24}
-          />
+
+        {/* Footer Bottom */}
+        <div className="text-center">
+          <p className="text-sm text-gray-500">&copy; 2024 CrowdCap. All Rights Reserved.</p>
         </div>
       </div>
-      <div className="relative leading-[24px] inline-block max-w-full z-[2]">
-        <span className="font-medium">{`© 2024 `}</span>
-        <b>CodeVast</b>
-        <span className="font-medium">. All rights reserved.</span>
-      </div>
-    </div>
+    </footer>
   );
 };
 

@@ -3,6 +3,27 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom Global Styles */
 body {
-    background-color: #1f1f1f; 
-  }
+  background-color: #ffffff;  /* white background */
+  color: #000000;  /* black text */
+  font-family:'Poppins', sans-serif;
+
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #000000;  /* black font color for all headings */
+}
+
+a {
+  color: #000000;  /* black text for links */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
