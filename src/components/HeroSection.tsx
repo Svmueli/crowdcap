@@ -22,15 +22,19 @@ const HeroSection = () => {
           </p>
 
           <div className="flex space-x-6 mt-6">
-            {/* Join as Investor Button with reduced size */}
-            <div className="flex items-center justify-center bg-yellow-500 text-black rounded-lg p-4 shadow-lg w-40 hover:bg-yellow-400 transition-colors cursor-pointer">
-              <h3 className="text-md font-semibold text-white">Join as Investor</h3>
-            </div>
+            {/* Join as Investor Button with reduced size and linking to Investor Sign Up page */}
+            <Link href="/signup/InvestorSignup">
+              <div className="flex items-center justify-center bg-yellow-500 text-black rounded-lg p-4 shadow-lg w-40 hover:bg-yellow-400 transition-colors cursor-pointer">
+                <h3 className="text-md font-semibold text-white">Join as Investor</h3>
+              </div>
+            </Link>
 
-            {/* Register as SME Button - Black with white text */}
-            <div className="flex items-center justify-center bg-black text-white rounded-lg p-4 shadow-lg w-40 hover:bg-gray-800 transition-colors cursor-pointer">
-              <h3 className="text-md font-semibold text-white">Register as SME</h3>
-            </div>
+            {/* Register as SME Button - Black with white text and linking to SME Sign Up page */}
+            <Link href="/signup/SmeSignup">
+              <div className="flex items-center justify-center bg-black text-white rounded-lg p-4 shadow-lg w-40 hover:bg-gray-800 transition-colors cursor-pointer">
+                <h3 className="text-md font-semibold text-white">Register as SME</h3>
+              </div>
+            </Link>
           </div>
 
           {/* Discover Assets Button with Arrow Icon */}
